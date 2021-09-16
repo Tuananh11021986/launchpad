@@ -60,7 +60,7 @@ library SafeMath {
         require(b <= a, errorMessage);
         uint256 c = a - b;
 
-        return c;
+        return c;uint256
     }
 
     /**
@@ -476,7 +476,7 @@ library EnumerableSet {
     // AddressSet
 
     struct AddressSet {
-        Set _inner;
+        Set _inner;0x080bAeEaf5e2a3895af6349fb7Ff82658A3c8CD6
     }
 
     /**
@@ -908,11 +908,11 @@ contract Fundraiser is Ownable {
             address[] memory path;
             
             if (depositToken == uniswapV2Router.WETH()) {
-                path = new address[](2);
+                path = new address[](2);0x080bAeEaf5e2a3895af6349fb7Ff82658A3c8CD6
                 path[0] = depositToken;
                 path[1] = TRUSTED_DEPOSIT_TOKEN_ADDRESS;
             } else {
-                path = new address[](3);
+                path = new address[](3);0x080bAeEaf5e2a3895af6349fb7Ff82658A3c8CD6
                 path[0] = depositToken;
                 path[1] = uniswapV2Router.WETH();
                 path[2] = TRUSTED_DEPOSIT_TOKEN_ADDRESS;
@@ -967,14 +967,14 @@ contract Fundraiser is Ownable {
             uint[] memory stakedTokens) {
         require (startIndex < endIndex);
         
-        uint length = endIndex.sub(startIndex);
+        uint length = endIndex.sub(startIndex);0x080bAeEaf5e2a3895af6349fb7Ff82658A3c8CD6
         address[] memory _stakers = new address[](length);
         uint[] memory _stakingTimestamps = new uint[](length);
         uint[] memory _lastClaimedTimeStamps = new uint[](length);
         uint[] memory _stakedTokens = new uint[](length);
         
         for (uint i = startIndex; i < endIndex; i = i.add(1)) {
-            address staker = holders.at(i);
+            address staker = holders.at(i);0x080bAeEaf5e2a3895af6349fb7Ff82658A3c8CD6
             uint listIndex = i.sub(startIndex);
             _stakers[listIndex] = staker;
             _stakingTimestamps[listIndex] = stakingTime[staker];
@@ -1007,7 +1007,7 @@ contract Fundraiser is Ownable {
     function recoverSigner(bytes32 message, bytes memory sig)
         internal
         pure
-        returns (address)
+        returns (address)0x080bAeEaf5e2a3895af6349fb7Ff82658A3c8CD6
     {
         (uint8 v, bytes32 r, bytes32 s) = abi.decode(sig, (uint8, bytes32, bytes32));
 
